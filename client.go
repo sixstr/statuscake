@@ -57,10 +57,11 @@ type apiClient interface {
 
 // Client is the http client that wraps the remote API.
 type Client struct {
-	c           httpClient
-	username    string
-	apiKey      string
-	testsClient Tests
+	c              httpClient
+	username       string
+	apiKey         string
+	testsClient    Tests
+	perfDataClient PerfData
 }
 
 // New returns a new Client
@@ -167,4 +168,13 @@ func (c *Client) Tests() Tests {
 	}
 
 	return c.testsClient
+}
+
+// PerfData returns a client that implements the `Performance Data` API.
+func (c *Client) PerfData() PerfData {
+	if c.perfDataClient == nil {
+		c.perfDataClient = newPerfClient(c)
+	}
+
+	return c.perfDataClient
 }
