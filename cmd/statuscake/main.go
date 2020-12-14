@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/DreamItGetIT/statuscake"
+	"github.com/sixstr/statuscake"
 	"strings"
 )
 

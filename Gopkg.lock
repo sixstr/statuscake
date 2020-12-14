@@ -4,7 +4,7 @@
 [[projects]]
   branch = "master"
   digest = "1:27dce89d419e7be582ae735623fb0b538012e62b08a87c0308c3b360de2a74b0"
-  name = "github.com/DreamItGetIT/statuscake"
+  name = "github.com/sixstr/statuscake"
   packages = ["."]
   pruneopts = "UT"
   revision = "49ae6aae1769b896774d7e860e620f1bd8221355"
@@ -48,7 +48,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/DreamItGetIT/statuscake",
+    "github.com/sixstr/statuscake",
     "github.com/google/go-querystring/query",
     "github.com/stretchr/testify/assert",
     "github.com/stretchr/testify/require"
