@@ -27,7 +27,7 @@
 
 [[constraint]]
   branch = "master"
-  name = "github.com/DreamItGetIT/statuscake"
+  name = "github.com/sixstr/statuscake"
 
 [[constraint]]
   name = "github.com/stretchr/testify"

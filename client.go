@@ -62,6 +62,8 @@ type Client struct {
 	apiKey         string
 	testsClient    Tests
 	perfDataClient PerfData
+	contactgroupClient	ContactGroups
+
 }
 
 // New returns a new Client
@@ -177,4 +179,13 @@ func (c *Client) PerfData() PerfData {
 	}
 
 	return c.perfDataClient
+}
+
+// ContactGroups returns a client that implements the `ContactGroups` API.
+func (c *Client) ContactGroups() ContactGroups {
+	if c.contactgroupClient == nil {
+		c.contactgroupClient = NewContactGroups(c)
+	}
+
+	return c.contactgroupClient
 }
